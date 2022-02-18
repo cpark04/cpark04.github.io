@@ -1,38 +1,35 @@
-import React, { Component } from "react";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import Facebook from "@material-ui/icons/Facebook";
+import Twitter from "@material-ui/icons/Twitter";
+import Instagram from "@material-ui/icons/Instagram";
 
-class Footer extends Component {
-  render() {
-    if (this.props.sharedBasicInfo) {
-      var networks = this.props.sharedBasicInfo.social.map(function (network) {
-        return (
-          <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <i className={network.class}></i>
-            </a>
-          </span>
-        );
-      });
-    }
+const useStyles = makeStyles({
+  bottomNavContainer: {
+    background: "#222",
+  },
+  root: {
+    "& .MuiSvgIcon-root": {
+      fill: "tan",
+      "&:hover": {
+        fill: "tomato",
+        fontSize: "1.8rem",
+      },
+    },
+  },
+});
 
-    return (
-      <footer>
-        <div className="col-md-12">
-          <div className="social-links">{networks}</div>
+const Footer = () => {
+  const classes = useStyles();
 
-          <div className="copyright py-4 text-center">
-            <div className="container">
-              <small>
-                Copyright &copy;{" "}
-                {this.props.sharedBasicInfo
-                  ? this.props.sharedBasicInfo.name
-                  : "???"}
-              </small>
-            </div>
-          </div>
-        </div>
-      </footer>
-    );
-  }
-}
-
+  return (
+    <BottomNavigation className={classes.bottomNavContainer}>
+      <BottomNavigationAction icon={<Facebook />} className={classes.root} />
+      <BottomNavigationAction icon={<Twitter />} className={classes.root} />
+      <BottomNavigationAction icon={<Instagram />} className={classes.root} />
+    </BottomNavigation>
+  );
+};
 export default Footer;

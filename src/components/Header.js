@@ -1,98 +1,62 @@
-import React, { Component } from "react";
-import Typical from "react-typical";
-import Switch from "react-switch";
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Avatar from "@material-ui/core/Avatar";
+import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
+import Typed from "react-typed";
+import { makeStyles } from "@material-ui/core/styles";
+import avatar from "../avatar.png";
 
-class Header extends Component {
-  titles = [];
+const useStyles = makeStyles((theme) => ({
+  avatar: {
+    width: theme.spacing(15),
+    height: theme.spacing(15),
+    margin: theme.spacing(1),
+  },
+  title: {
+    color: "tomato",
+  },
+  subtitle: {
+    color: "tan",
+    textTransform: "uppercase",
+  },
+  typedContainer: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+    width: "100vw",
+    textAlign: "center",
+    zIndex: 1,
+  },
+}));
 
-  constructor() {
-    super();
-    this.state = { checked: false };
-    this.onThemeSwitchChange = this.onThemeSwitchChange.bind(this);
-  }
+const Header = () => {
+  const classes = useStyles();
 
-  onThemeSwitchChange(checked) {
-    this.setState({ checked });
-    this.setTheme();
-  }
+  return (
+    <Box className={classes.typedContainer}>
+      <Grid container justify="center">
+        <Avatar className={classes.avatar} src={avatar} alt="Mahmudul Alam" />
+      </Grid>
+      <Typography className={classes.title} variant="h4">
+        <Typed strings={["Mahmudul Alam"]} typeSpeed={40} />
+      </Typography>
 
-  setTheme() {
-    var dataThemeAttribute = "data-theme";
-    var body = document.body;
-    var newTheme =
-      body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
-    body.setAttribute(dataThemeAttribute, newTheme);
-  }
-
-  render() {
-    if (this.props.sharedData) {
-      var name = this.props.sharedData.name;
-      this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
-    }
-
-    const HeaderTitleTypeAnimation = React.memo( () => {
-      return <Typical className="title-styles" steps={this.titles} loop={50} />
-    }, (props, prevProp) => true);
-
-    return (
-      <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
-        <div className="row aligner" style={{height: '100%'}}>
-          <div className="col-md-12">
-            <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
-              <br/>
-              <h1 className="mb-0">
-                <Typical steps={[name]} wrapper="p" />
-              </h1>
-              <div className="title-container">
-                <HeaderTitleTypeAnimation />
-              </div>
-              <Switch
-                checked={this.state.checked}
-                onChange={this.onThemeSwitchChange}
-                offColor="#baaa80"
-                onColor="#353535"
-                className="react-switch mx-auto"
-                width={90}
-                height={40}
-                uncheckedIcon={
-                  <span
-                    className="iconify"
-                    data-icon="twemoji:owl"
-                    data-inline="false"
-                    style={{
-                      display: "block",
-                      height: "100%",
-                      fontSize: 25,
-                      textAlign: "end",
-                      marginLeft: "20px",
-                      color: "#353239",
-                    }}
-                  ></span>
-                }
-                checkedIcon={
-                  <span
-                    className="iconify"
-                    data-icon="noto-v1:sun-with-face"
-                    data-inline="false"
-                    style={{
-                      display: "block",
-                      height: "100%",
-                      fontSize: 25,
-                      textAlign: "end",
-                      marginLeft: "10px",
-                      color: "#353239",
-                    }}
-                  ></span>
-                }
-                id="icon-switch"
-              />
-            </div>
-          </div>
-        </div>
-      </header>
-    );
-  }
-}
+      <Typography className={classes.subtitle} variant="h5">
+        <Typed
+          strings={[
+            "Frontend Developer",
+            "Backend Developer",
+            "Native App Developer",
+          ]}
+          typeSpeed={40}
+          backSpeed={50}
+          loop
+        />
+      </Typography>
+    </Box>
+  );
+};
 
 export default Header;
