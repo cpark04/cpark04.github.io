@@ -3,13 +3,13 @@ import Modal from "react-modal";
 import Index from "../about/index";
 
 const heroContent = {
-  heroImage: "img/hero/light.jpg",
-  heroMobileImage: "img-mobile-light",
-  heroTitleName: "lucy milner",
-  heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
+  heroImage: "img/hero/dark.jpg",
+  heroMobileImage: "img-mobile",
+  heroTitleName: "chris park",
+  heroDesignation: "software engineer",
+  heroDescriptions: `I'm a full-stack software engineer focused on
+  crafting clean & user‑friendly experiences. I am passionate about
+  building software that changes the lives of those
   around me.`,
   heroBtn: "more about me",
 };

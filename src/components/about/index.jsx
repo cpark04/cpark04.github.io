@@ -9,7 +9,7 @@ const index = () => {
   return (
     <section className="main-content ">
       <div className="container">
-        <div className="row">
+        <div className="row" id="about-me">
           {/* Personal Info Starts */}
 
           <div className="col-xl-6 col-lg-5 col-12">
@@ -47,9 +47,7 @@ const index = () => {
           {/*  Personal Info Ends */}
 
           {/*  Boxes Starts */}
-          <div className="col-xl-6 col-lg-7 col-12 mt-5 mt-lg-0">
-            <Achievements />
-          </div>
+          
           {/* Achievements Ends */}
         </div>
         {/* End .row */}
