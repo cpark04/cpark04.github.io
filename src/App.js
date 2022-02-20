@@ -1,27 +1,30 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Home from "./components";
-import Resume from "./components/Resume";
-import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
+import React, { useEffect } from "react";
+import Routes from "./router/Routes";
+import ScrollToTop from "./components/ScrollToTop";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import AnimatedCursor from "react-animated-cursor";
 
-import "./App.css";
+const App = () => {
+  // this for animation
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
-function App() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/resume" component={Resume} />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/contact" component={Contact} />
-      </Switch>
-    </React.Fragment>
+    <>
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={44}
+        color="255, 160, 1"
+        outerAlpha={0.3}
+        innerScale={0.7}
+        outerScale={1.2}
+      />
+      <ScrollToTop />
+      <Routes />
+    </>
   );
-}
+};
 
 export default App;
