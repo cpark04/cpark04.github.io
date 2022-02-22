@@ -120,7 +120,7 @@ const HomeLight = () => {
             >
               <div className="row">
                 {/*  Left Side Starts */}
-                <div className="col-12 col-lg-4">
+                <div className="col-12">
                   <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">
                     Don't be shy !
                   </h3>
@@ -138,9 +138,7 @@ const HomeLight = () => {
                 {/* Left Side Ends */}
 
                 {/*  Contact Form Starts  */}
-                <div className="col-12 col-lg-8">
-                  <Contact />
-                </div>
+                
                 {/*  Contact Form Ends */}
               </div>
             </div>

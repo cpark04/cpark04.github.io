@@ -2,25 +2,22 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "   2018 - Present",
-    position: " Web Developer",
-    compnayName: "Envato",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
+    year: "   2015 - 2021",
+    position: " VP of Operations",
+    compnayName: "Hill Sportswear Inc",
+    details: `  Developed an inventory system to dynamically keep track of stock that increased efficiency by 30%.
+Devised and executed a solution to keep the company operational during pandemic shutdowns.
+Increased yearly sales from $1 million to $4 million.
+`,
   },
   {
-    year: "2013 - 2018",
-    position: " UI/UX Designer",
-    compnayName: "Themeforest",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
-  },
-  {
-    year: "2005 - 2013",
-    position: "Consultant",
-    compnayName: "Videohive",
-    details: `Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur
-        elit, sed do eiusmod tempor duntt`,
+    year: "2008 - 2015",
+    position: "Project Manager",
+    compnayName: "Hill Sportswear Inc",
+    details: `Designed and manufactured 15 different clothing styles that increased sales and demand of the company’s products.
+Established company presence by exhibiting major trade shows annually.
+Developed client relationships with renown companies such as Diamond Supply Co. and secured regular yearly orders.
+`,
   },
 ];
 

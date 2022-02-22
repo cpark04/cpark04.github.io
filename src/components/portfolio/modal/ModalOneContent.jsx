@@ -6,26 +6,25 @@ const ModalOneContent = () => {
       <figure>
         {/* Project Details Starts */}
         <figcaption>
-          <h3>Image Project</h3>
+          <h3>SomeTrails</h3>
           <div className="row open-sans-font">
             <div className="col-12 col-sm-6 mb-2">
               <i className="fa fa-file-text-o pr-2"></i>
               <span className="project-label">Project </span>:{" "}
-              <span className="ft-wt-600 uppercase">Website</span>
+              <span className="ft-wt-600 uppercase">Full-stack Clone of AllTrails</span>
             </div>
             {/* End .col */}
 
             <div className="col-12 col-sm-6 mb-2">
-              <i className="fa fa-user-o pr-2"></i>
-              <span className="project-label">Client </span>:{" "}
-              <span className="ft-wt-600 uppercase">Envato</span>
+              <span className="project-label"> </span>{" "}
+              <span className="ft-wt-600 uppercase"></span>
             </div>
             {/* End .col */}
 
             <div className="col-12 col-sm-6 mb-2">
               <i className="fa fa-code pr-2"></i>
-              <span className="project-label">Langages </span>:{" "}
-              <span className="ft-wt-600 uppercase">HTML, CSS, Javascript</span>
+              <span className="project-label">Technologies </span>:{" "}
+              <span className="ft-wt-600 uppercase">React, Redux, HTML, Javascript, Ruby on Rails, PostgreSQL, AWS, Heroku, Webpack</span>
             </div>
             {/* End .col */}
 
@@ -34,11 +33,11 @@ const ModalOneContent = () => {
               <span className="project-label">Preview </span>:{" "}
               <span className="ft-wt-600 uppercase">
                 <a
-                  href="https://themeforest.net/item/edina-personal-portfolio-react-template/34082686"
+                  href="https://some-trails.herokuapp.com/#/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  www.envato.com
+                  Click Here
                 </a>
               </span>
             </div>
@@ -49,7 +48,7 @@ const ModalOneContent = () => {
         {/* Project Details Ends */}
 
         {/*  Main Project Content Starts */}
-        <img src="img/projects/project-1.jpg" alt="Portolio" />
+        <img src="img/projects/project-1.png" alt="Portolio" />
         {/* Main Project Content Ends */}
       </figure>
     </div>

@@ -5,15 +5,13 @@ const educationContent = [
     year: "2021",
     degree: "SOFTWARE ENGINEER",
     institute: "APP ACADEMY",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
+    details: `16 Week Intensive Coding Bootcamp Program`,
   },
   {
     year: "2014",
     degree: "CREDITS TOWARD BS DEGREE",
     institute: "CALIFORNIA STATE POLYTECHNIC UNIVERSITY, POMONA",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
+    details: `Business Management`,
   },
 ];
 
